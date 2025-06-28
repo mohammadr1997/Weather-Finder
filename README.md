@@ -13,9 +13,7 @@ A responsive weather application built with React, leveraging the OpenWeatherMap
   
   # 📦 Features
 * 🔍 Search any city and get current weather data
-*☁️ Displays:
-        * Weather description
-        * Country and city name
+*☁️ Displays: Weather description / Country and city name
 * High/Low temperature
 *Wind speed
 *Humidity
