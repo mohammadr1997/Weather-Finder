@@ -39,7 +39,7 @@ lib/
 
 
 ## 📸 Screenshots
-![Weather App Screenshot](./public/weather-preview.png)
+![Weather App Screenshot](./public/images/weatherfinder.png)
 
 ## 🌐 API Reference
 Docs: https://openweathermap.org/current
