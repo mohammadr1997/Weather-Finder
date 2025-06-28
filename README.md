@@ -1,7 +1,7 @@
-## ☀️ Weather Finder
+# ☀️ Weather Finder
 A responsive weather application built with React, leveraging the OpenWeatherMap API to display current weather data based on the city name entered by the user
 
-## 🔧 Tech Stack
+# 🔧 Tech Stack
 * React with "use client" directive (for Next.js App Router or similar SSR environment)
 * React Query (@tanstack/react-query) – for efficient API data fetching and caching
 * Axios – for HTTP requests
@@ -11,7 +11,7 @@ A responsive weather application built with React, leveraging the OpenWeatherMap
 * React Context API – for global state management
 
   
-  ## 📦 Features
+  # 📦 Features
 * 🔍 Search any city and get current weather data
 *☁️ Displays: Weather description / Country and city name
 * High/Low temperature
@@ -23,7 +23,8 @@ A responsive weather application built with React, leveraging the OpenWeatherMap
 * 📱 Fully responsive design using Tailwind + MUI
 
 
-## 🧩 Project Structure 
+# 🧩 Project Structure 
+```bash
 components/
 ├── Main.tsx            # Entry component with layout and state
 ├── SearchField.tsx     # MUI input field
@@ -36,10 +37,10 @@ data/
 └── weatherImageMap.ts  # Image mapping for weather types
 lib/
 └── secret.ts           # API key import
+```
 
-
-## 📸 Screenshots
+# 📸 Screenshots
 ![Weather App Screenshot](./public/images/weatherfinder.png)
 
-## 🌐 API Reference
+##🌐 API Reference
 Docs: https://openweathermap.org/current
