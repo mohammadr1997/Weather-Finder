@@ -1,7 +1,7 @@
 # ☀️ Weather Finder
 A responsive weather application built with React, leveraging the OpenWeatherMap API to display current weather data based on the city name entered by the user
 
-### 🔗[Live Demo](https://weather-finder-sigma.vercel.app/)
+### 🔗[Live Demo](https://weather-finder-iota.vercel.app/)
 
 # 🔧 Tech Stack
 * React with "use client" directive (for Next.js App Router or similar SSR environment)
