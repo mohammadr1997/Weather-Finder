@@ -2,6 +2,7 @@
 import React from 'react'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { Context } from './ContextProvider'
+import Image from 'next/image'
 import { weatherImageMap } from '../data'
 import Loading from './Loading'
 import { API_KEY } from '../lib/secret'
@@ -54,7 +55,7 @@ const formattedDate=date.toDateString();
        <div className='flex opacity-100 flex-col gap-1 justify-center w-full '>
          <span className='text-center text-sky-800 text-lg md:text-xl'>{data?.name},{data?.sys.country}</span>
          <div className='w-full text-center mt-0 mb-10 md:mb-44 md:mt-4 opacity-100'>
-          <img className='w-1/2 h-1/2 z-50 opacity-100 mx-auto' src={imageSrc} alt="icon-weather" />
+          <Image width={76} height={76} className='w-1/2 h-1/2 z-50 opacity-100 mx-auto' src={imageSrc} alt="icon-weather" />
              
          </div>
       <div className='flex flex-col gap-2  -mt-8 md:-mt-40 '>
