@@ -12,7 +12,7 @@ export default function Searchbutton({inputValue}:propType) {
   const handleClick=()=>{
     if(!inputValue) return;
     if(setCityName){
-      setCityName((prevCity)=>inputValue)
+      setCityName(inputValue)
     }
   }
   return (
