@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 
 
 type propType={
-  onInputChange:()=>void
+  onInputChange:(e:React.ChangeEvent<HTMLInputElement>)=>void
 }
 export default function SearchField({onInputChange}:propType) {
   
