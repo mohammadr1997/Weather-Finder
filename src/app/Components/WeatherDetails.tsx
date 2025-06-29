@@ -16,11 +16,13 @@ export default function WeatherDetails() {
  
 
 
- const findWeather=async(city)=>{
+ const findWeather=async(city:string)=>{
   
     const response= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
     return response.data
  }
+
+if(!cityName) return;
  const {data,isLoading}=useQuery({
     queryKey:['weatherFinder',cityName],
     queryFn:()=>findWeather(cityName),
