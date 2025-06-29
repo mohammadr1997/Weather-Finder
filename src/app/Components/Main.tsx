@@ -6,7 +6,7 @@ import WeatherDetails from './WeatherDetails'
 import { useState } from 'react'
 export default function Main() {
   const [inputValue,setInputValue]=useState('');
-  const handleChange=(e)=>{
+  const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
    const input=e.target.value.trim()
    const city=input.charAt(0).toUpperCase() + input.slice(1)
    setInputValue(city);
