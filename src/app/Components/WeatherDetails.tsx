@@ -22,10 +22,10 @@ export default function WeatherDetails() {
     return response.data
  }
 
-if(!cityName) return;
+
  const {data,isLoading}=useQuery({
     queryKey:['weatherFinder',cityName],
-    queryFn:()=>findWeather(cityName),
+    queryFn:()=>findWeather(cityName!),
     enabled:!!cityName,
     retry:2,
     placeholderData:keepPreviousData
