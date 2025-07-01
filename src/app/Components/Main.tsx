@@ -13,7 +13,7 @@ export default function Main() {
   }
  
   return (
-    <section className='bg-stone-100 opacity-85 absolute top-2 h-[115vh] md:h-[110vh]  p-4 z-50 w-1/2  rounded-md flex justify-center align-middle'>
+    <section className='bg-stone-100 opacity-85 absolute top-2 h-[100vh] md:h-[110vh]  p-4 z-50 w-3/4 md:w-1/2  rounded-md flex justify-center align-middle'>
       <div className='flex flex-col flex-nowrap'>
          <h1 className='text-3xl md:text-5xl   text-center'>
         Weather Finder 
