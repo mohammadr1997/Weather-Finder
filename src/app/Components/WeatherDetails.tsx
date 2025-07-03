@@ -32,7 +32,7 @@ export default function WeatherDetails() {
     placeholderData:keepPreviousData
  })
 
-console.log('data',data)
+
 let image=data?.weather[0].main
 const isAtmosphere= atmosphere.find((condition)=>condition===image)
 const isExtreme=extreme.find((condition)=>condition===image)
@@ -40,7 +40,8 @@ if(isAtmosphere) image='Atmosphere'
 if(isExtreme) image='Extreme'
 
 const imageSrc=weatherImageMap[image] || '';
-
+const lowTemp=(data?.main.temp_min - 273.15).toFixed(0)
+const highTemp=(data?.main.temp_max - 273.15).toFixed(0)
 
 
 
@@ -61,7 +62,7 @@ const formattedDate=date.toDateString();
       <div className='flex flex-col gap-2  -mt-8 md:-mt-40 '>
           <span className='text-lg md:text-xl text-center'>Additioanl Information</span>
           <div className='flex flex-col md:flex-row  gap-4  md:flex-wrap md:justify-center w-full '>
-            <div className='w-full mx-auto flex flex-row flex-nowrap gap-3 md:gap-8 justify-around text-center md:w-[10.5rem] '><span className=' text-sm md:text-md w-1/6'>High/Low</span> <span className='text-stone-600 text-sm md:text-md '>{data?.main.temp_min}&nbsp; / {data?.main.temp_max}</span></div>
+            <div className='w-full mx-auto flex flex-row flex-nowrap gap-3 md:gap-8 justify-around text-center md:w-[10.5rem] '><span className=' text-sm md:text-md w-1/6'>High/Low</span> <span className='text-stone-600 text-sm md:text-md '>{highTemp} &deg;C &nbsp;/ {lowTemp}&deg;C</span></div>
              <div className='w-full flex flex-row flex-nowrap gap-3 md:gap-4 justify-around text-center md:w-[10.5rem] mx-auto '><span className=' text-sm md:text-md '>Wind</span> <span className='text-stone-600 text-sm md:text-md '>{data?.wind.speed} km/h</span></div>
                <div className='w-full flex flex-row flex-nowrap gap-3 md:gap-4 justify-around text-center md:w-[10.5rem] mx-auto '><span className=' text-sm md:text-md  '>Humidity</span> <span className='text-stone-600 text-sm md:text-md '>{data?.main.humidity} %</span></div>
              <div className='w-full flex flex-row flex-nowrap gap-3 md:gap-4 justify-around text-center md:w-[10.5rem] mx-auto '><span className=' text-sm md:text-md  '>Visibility</span> <span className='text-stone-600 text-sm md:text-md '>{data?.visibility} ml</span></div>
